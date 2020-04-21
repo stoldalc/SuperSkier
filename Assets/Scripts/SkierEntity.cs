@@ -20,7 +20,10 @@ public class SkierEntity : MonoBehaviour
     //Skier current vals
     //-----------------------------
     public Vector3 velocity;
+
+    public Vector3 desiredPosition;
     public Vector3 position;
+   
 
     public float speed;
     public float desiredSpeed;

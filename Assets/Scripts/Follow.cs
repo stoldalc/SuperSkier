@@ -8,6 +8,8 @@ public class Follow : MonoBehaviour
     public BoatEntity leader;
     public SkierEntity follower;
 
+    public float followDistance = 50;
+
     private void Awake()
     {
        
@@ -31,7 +33,7 @@ public class Follow : MonoBehaviour
 
         float followerX = follower.position.x;
         float followerY = follower.position.y;
-        follower.position.z = leader.position.z-30;
+        follower.position.z = leader.position.z-followDistance;
 
     }
 }

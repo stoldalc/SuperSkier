@@ -24,7 +24,7 @@ public class CountDownTimer : MonoBehaviour
     {
         currentTime -= 1 * Time.deltaTime;
         countDownText.text = currentTime.ToString();
-        print(currentTime);
+        //print(currentTime);
         if(currentTime <= 1)
         {
             SceneManager.LoadScene(GameOverScene);

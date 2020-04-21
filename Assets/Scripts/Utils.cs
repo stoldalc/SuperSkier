@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Utils
 {
-    public static float EPSILON = 0.1f;
+    public static float EPSILON = 2f;
     public static bool ApproximatelyEqual(float a, float b)
     {
         return Mathf.Abs(a - b) < EPSILON;

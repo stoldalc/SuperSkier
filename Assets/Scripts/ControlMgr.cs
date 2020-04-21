@@ -15,6 +15,8 @@ public class ControlMgr : MonoBehaviour
     }
 
 
+    public float left2RightDELTA = 1;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -26,11 +28,11 @@ public class ControlMgr : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.LeftArrow))
         {
-
+            skier.desiredPosition.x -= left2RightDELTA;
         }
         if (Input.GetKey(KeyCode.RightArrow))
         {
-
+            skier.desiredPosition.x += left2RightDELTA;
         }
     }
 }

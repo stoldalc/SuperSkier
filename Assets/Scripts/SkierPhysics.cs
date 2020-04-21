@@ -33,5 +33,20 @@ public class SkierPhysics : MonoBehaviour
         entity.position = entity.position + entity.velocity * Time.deltaTime;
         transform.localPosition = entity.position;
 
+        Debug.Log("Before logic statments: Entitys current x pos is " + entity.position.x + " and desired x pos is " + entity.desiredPosition.x);
+        if(Utils.ApproximatelyEqual(entity.position.x, entity.desiredPosition.x))
+        {
+            Debug.Log("Approx equal returned true");
+        }
+        else if(entity.position.x > entity.desiredPosition.x)
+        {
+            entity.position.x -= entity.left2RightSpeed;
+        }
+        else if(entity.position.x < entity.desiredPosition.x)
+        {
+            entity.position.x += entity.left2RightSpeed;
+        }
+        Debug.Log("After logic statments: Entitys current x pos is " + entity.position.x + " and desired x pos is " + entity.desiredPosition.x);
+        transform.localPosition = entity.position;
     }
 }
