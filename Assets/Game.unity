@@ -802,6 +802,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1365319218}
+  - component: {fileID: 1365319220}
+  - component: {fileID: 1365319219}
   m_Layer: 0
   m_Name: Skier
   m_TagString: Untagged
@@ -825,6 +827,44 @@ Transform:
   m_Father: {fileID: 581187345}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1365319219
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1365319217}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0d4a18bd6922d443ac4c2297751cecc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  acceleration: 2
+  turnRate: 0
+  maxSpeed: 30
+  minSpeed: 0
+  isSelected: 0
+  velocity: {x: 0, y: 0, z: 0}
+  position: {x: 0, y: 0, z: 0}
+  speed: 0
+  desiredSpeed: 0
+  desiredHeading: 0
+  heading: 0
+  CameraRig: {fileID: 0}
+--- !u!114 &1365319220
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1365319217}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7591f7396ed4c214ea1cffcc05be4647, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  leader: {fileID: 1738149706}
+  follower: {fileID: 0}
 --- !u!1 &1623397733
 GameObject:
   m_ObjectHideFlags: 0
@@ -866,6 +906,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1738149705}
+  - component: {fileID: 1738149706}
+  - component: {fileID: 1738149707}
   m_Layer: 0
   m_Name: Boat
   m_TagString: Untagged
@@ -888,6 +930,44 @@ Transform:
   m_Father: {fileID: 581187345}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1738149706
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1738149704}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0d4a18bd6922d443ac4c2297751cecc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  acceleration: 2
+  turnRate: 10
+  maxSpeed: 30
+  minSpeed: 0
+  isSelected: 0
+  velocity: {x: 0, y: 0, z: 0}
+  position: {x: 0, y: 0, z: 0}
+  speed: 0
+  desiredSpeed: 30
+  desiredHeading: 0
+  heading: 0
+  CameraRig: {fileID: 0}
+--- !u!114 &1738149707
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1738149704}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 299eb445cc32b78408c80b98ac905a95, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  entity: {fileID: 1738149706}
+  eulerRotation: {x: 0, y: 0, z: 0}
 --- !u!1 &2038502913
 GameObject:
   m_ObjectHideFlags: 0
