@@ -5,8 +5,8 @@ using UnityEngine;
 public class Follow : MonoBehaviour
 {
 
-    public BoatPhysics leader;
-    public SkierPhysics follower;
+    public BoatEntity leader;
+    public SkierEntity follower;
 
     private void Awake()
     {

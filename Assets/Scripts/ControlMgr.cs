@@ -6,7 +6,7 @@ public class ControlMgr : MonoBehaviour
 {
     public static ControlMgr inst;
 
-    public SkierPhysics skier;
+    public SkierEntity skier;
 
 
     private void Awake()
