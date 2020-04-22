@@ -52,12 +52,16 @@ public class SkierPhysics : MonoBehaviour
         transform.localPosition = entity.position;
     }
 
+
+    public AudioSource coinPickUpSound;
+
     private void OnTriggerEnter(Collider other)
     {
         Debug.Log("In on trigger enter");
         if (other.gameObject.CompareTag("Pick Up"))
         {
             other.gameObject.SetActive(false);
+            coinPickUpSound.Play();
             entity.score += 1;
         }
     }
