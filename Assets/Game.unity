@@ -451,7 +451,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &242583493
 Transform:
   m_ObjectHideFlags: 0
@@ -1185,7 +1185,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f876ae271f5905d44b8476139657961a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startTime: 30
+  startTime: 15
   currentTime: 0
   countDownText: {fileID: 509878530}
   GameOverScene: GameOver
@@ -2015,9 +2015,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0d4a18bd6922d443ac4c2297751cecc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  acceleration: 2
+  acceleration: 10
   turnRate: 10
-  maxSpeed: 30
+  maxSpeed: 40
   minSpeed: 0
   isSelected: 0
   velocity: {x: 0, y: 0, z: 0}
