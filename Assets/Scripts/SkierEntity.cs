@@ -27,6 +27,8 @@ public class SkierEntity : MonoBehaviour
 
     public float speed;
     public float desiredSpeed;
+
+    public int score = 0;
     
 
     void Start()
@@ -39,4 +41,6 @@ public class SkierEntity : MonoBehaviour
     {
         
     }
+
+    
 }

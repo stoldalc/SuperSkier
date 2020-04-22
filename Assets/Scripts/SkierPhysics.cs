@@ -6,6 +6,8 @@ public class SkierPhysics : MonoBehaviour
 {
     public SkierEntity entity;
 
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -33,10 +35,10 @@ public class SkierPhysics : MonoBehaviour
         entity.position = entity.position + entity.velocity * Time.deltaTime;
         transform.localPosition = entity.position;
 
-        Debug.Log("Before logic statments: Entitys current x pos is " + entity.position.x + " and desired x pos is " + entity.desiredPosition.x);
+        //Debug.Log("Before logic statments: Entitys current x pos is " + entity.position.x + " and desired x pos is " + entity.desiredPosition.x);
         if(Utils.ApproximatelyEqual(entity.position.x, entity.desiredPosition.x))
         {
-            Debug.Log("Approx equal returned true");
+            //Debug.Log("Approx equal returned true");
         }
         else if(entity.position.x > entity.desiredPosition.x)
         {
@@ -46,7 +48,19 @@ public class SkierPhysics : MonoBehaviour
         {
             entity.position.x += entity.left2RightSpeed;
         }
-        Debug.Log("After logic statments: Entitys current x pos is " + entity.position.x + " and desired x pos is " + entity.desiredPosition.x);
+        //Debug.Log("After logic statments: Entitys current x pos is " + entity.position.x + " and desired x pos is " + entity.desiredPosition.x);
         transform.localPosition = entity.position;
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        Debug.Log("In on trigger enter");
+        if (other.gameObject.CompareTag("Pick Up"))
+        {
+            other.gameObject.SetActive(false);
+            entity.score += 1;
+        }
+    }
+
+   
 }
