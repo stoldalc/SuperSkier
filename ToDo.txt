@@ -10,3 +10,4 @@ ToDo CS381 Final Project
 -Mute 
 -Floating arches
 -Ramp speed boosts
+-Volume slider in options
