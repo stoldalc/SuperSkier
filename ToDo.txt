@@ -1,0 +1,12 @@
+ToDo CS381 Final Project
+-Pause
+-High score page
+-Final score on end page
+-Moving obstacles
+-figure out whole map
+-Change physics to force instead of transforms
+-Instructions page
+-Options
+-Mute 
+-Floating arches
+-Ramp speed boosts
