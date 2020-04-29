@@ -82,5 +82,44 @@ public class Utils
         return false;
     }
 
+    public static string Float2Time(float timeF)
+    {
+        Debug.Log("timeF is: " + timeF);
+        string timeS;
+        if(timeF >= 60)
+        {
+            if(timeF == 60)
+            {
+                return "01:00";
+            }
+            else
+            {
+                int mins = (int)Mathf.Ceil(timeF) / 60;
+                Debug.Log("result is: " + mins);
+                timeS =  mins.ToString();
+
+                float seconds;
+                seconds = timeF % 60;
+                seconds = (int)Mathf.Ceil(seconds);
+                timeS = timeS + ":" + seconds.ToString();
+                return timeS;
+            }
+        }
+        else
+        {   if(timeF < 10)
+            {
+                int seconds = (int)Mathf.Ceil(timeF);
+                return "00:0" + seconds.ToString();
+            }
+            int seconds2 = (int)Mathf.Ceil(timeF);
+            return "00:" + seconds2.ToString();
+        }
+    }
+
+    public void MaximumOverdrive()
+    {
+
+    }
+
 }
 

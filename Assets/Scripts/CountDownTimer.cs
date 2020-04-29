@@ -23,7 +23,7 @@ public class CountDownTimer : MonoBehaviour
     void Update()
     {
         currentTime -= 1 * Time.deltaTime;
-        countDownText.text = currentTime.ToString();
+        countDownText.text = Utils.Float2Time(currentTime);
         //print(currentTime);
         if(currentTime <= 1)
         {

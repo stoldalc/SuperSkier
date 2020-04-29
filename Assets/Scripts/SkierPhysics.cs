@@ -6,6 +6,7 @@ public class SkierPhysics : MonoBehaviour
 {
     public SkierEntity entity;
 
+    public BoatEntity boat;
 
 
     // Start is called before the first frame update
@@ -18,38 +19,7 @@ public class SkierPhysics : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Utils.ApproximatelyEqual(entity.speed, entity.desiredSpeed))
-        {
-
-        }
-        else if (entity.speed < entity.desiredSpeed)
-        {
-            entity.speed = entity.speed + entity.acceleration * Time.deltaTime;
-        }
-        else if (entity.speed > entity.desiredSpeed)
-        {
-            entity.speed = entity.speed - entity.acceleration * Time.deltaTime;
-        }
-        entity.speed = Utils.Clamp(entity.speed, entity.minSpeed, entity.maxSpeed);
-
-        entity.position = entity.position + entity.velocity * Time.deltaTime;
-        transform.localPosition = entity.position;
-
-        //Debug.Log("Before logic statments: Entitys current x pos is " + entity.position.x + " and desired x pos is " + entity.desiredPosition.x);
-        if(Utils.ApproximatelyEqual(entity.position.x, entity.desiredPosition.x))
-        {
-            //Debug.Log("Approx equal returned true");
-        }
-        else if(entity.position.x > entity.desiredPosition.x)
-        {
-            entity.position.x -= entity.left2RightSpeed;
-        }
-        else if(entity.position.x < entity.desiredPosition.x)
-        {
-            entity.position.x += entity.left2RightSpeed;
-        }
-        //Debug.Log("After logic statments: Entitys current x pos is " + entity.position.x + " and desired x pos is " + entity.desiredPosition.x);
-        transform.localPosition = entity.position;
+        
     }
 
 
@@ -63,6 +33,16 @@ public class SkierPhysics : MonoBehaviour
             other.gameObject.SetActive(false);
             coinPickUpSound.Play();
             entity.score += 1;
+        }
+        if (other.gameObject.CompareTag("Ramp"))
+        {
+            boat.speed = boat.maxSpeed;
+            boat.desiredSpeed = boat.cruisingSpeed;
+        }
+        if (other.gameObject.CompareTag("Obstacle"))
+        {
+            boat.speed = 0;
+            boat.desiredSpeed = boat.cruisingSpeed;
         }
     }
 

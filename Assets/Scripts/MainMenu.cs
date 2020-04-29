@@ -17,6 +17,11 @@ public class MainMenu : MonoBehaviour
     public GameObject optionsTitle;
     public GameObject optionsBackPanel;
 
+    public GameObject volumeSlider;
+    public GameObject volumeTitle;
+    public AudioSource audioSrc;
+    public float musicVolume = .123f;
+
     //public GameObject volumeSlider;
     public GameObject backButton;
 
@@ -29,7 +34,7 @@ public class MainMenu : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        audioSrc.volume = musicVolume;
     }
 
     public void NewGame()
@@ -74,8 +79,16 @@ public class MainMenu : MonoBehaviour
         //Set status of options back panel
         optionsBackPanel.gameObject.SetActive(status);
         //Status of volume slider
-        //volumeSlider.gameObject.SetActive(status);
+        volumeSlider.gameObject.SetActive(status);
         //Status of back button
         backButton.gameObject.SetActive(status);
+        //Status of volume title
+        volumeTitle.gameObject.SetActive(status);
+
+    }
+
+    public void SetVolume(float vol)
+    {
+        musicVolume = vol;
     }
 }

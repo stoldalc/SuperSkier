@@ -25,6 +25,7 @@ public class BoatEntity : MonoBehaviour
     public float desiredSpeed;
     public float desiredHeading;
     public float heading;
+    public float cruisingSpeed;
 
     public GameObject CameraRig;
 

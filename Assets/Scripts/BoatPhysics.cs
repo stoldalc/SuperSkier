@@ -64,6 +64,11 @@ public class BoatPhysics: MonoBehaviour
 
     public Vector3 eulerRotation = Vector3.zero;
 
+
+
+
 }
+
+
 
 
