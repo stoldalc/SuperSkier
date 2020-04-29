@@ -11,3 +11,9 @@ ToDo CS381 Final Project
 -Floating arches
 -Ramp speed boosts
 -Volume slider in options
+
+
+Things im doing this session
+-Change physics to force instead of transforms
+-Moving obstacles
+-Pause

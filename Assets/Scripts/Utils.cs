@@ -82,5 +82,36 @@ public class Utils
         return false;
     }
 
+    public static string Float2Time(float timeF)
+    {
+        Debug.Log("timeF is: " + timeF);
+        string timeS;
+        if(timeF >= 60)
+        {
+            if(timeF == 60)
+            {
+                return "01:00";
+            }
+            else
+            {
+                int mins = (int)Mathf.Ceil(timeF) / 60;
+                Debug.Log("result is: " + mins);
+                timeS =  mins.ToString();
+
+                float seconds;
+                seconds = timeF % 60;
+                timeS = timeS + ":" + seconds.ToString();
+                return timeS;
+            }
+        }
+        else
+        {   if(timeF < 10)
+            {
+                return "00:0" + timeF.ToString();
+            }
+            return "00:" + timeF.ToString();
+        }
+    }
+
 }
 

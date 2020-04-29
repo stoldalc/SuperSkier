@@ -22,10 +22,14 @@ public class CountDownTimer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         currentTime -= 1 * Time.deltaTime;
-        countDownText.text = currentTime.ToString();
+        
+
+
+        countDownText.text = Utils.Float2Time(currentTime);
         //print(currentTime);
-        if(currentTime <= 1)
+        if (currentTime <= 1)
         {
             SceneManager.LoadScene(GameOverScene);
         }
