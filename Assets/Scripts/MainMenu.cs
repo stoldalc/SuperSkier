@@ -9,21 +9,40 @@ public class MainMenu : MonoBehaviour
     public string newGameScene;
     public string optionsScreen;
 
+
+    //Main menu container
+    public GameObject mainMenuContainer;
+    //Options container
+    public GameObject optionsContainer;
+
+
+
+
+    //Big dumb dumb at the keyboard forgot about using gameobjs as containers
+    //But im keeping them just incase :)
+    /*
+    //Main menu 
     public GameObject mainMenuTitle;
     public GameObject startButton;
     public GameObject optionsButton;
     public GameObject quitButton;
+    public GameObject highscoreTable;
 
+    //Options
     public GameObject optionsTitle;
     public GameObject optionsBackPanel;
 
     public GameObject volumeSlider;
     public GameObject volumeTitle;
-    public AudioSource audioSrc;
-    public float musicVolume = .123f;
+    
+    
 
     //public GameObject volumeSlider;
     public GameObject backButton;
+    */
+
+    public AudioSource audioSrc;
+    public float musicVolume = .123f;
 
     // Start is called before the first frame update
     void Start()
@@ -62,6 +81,10 @@ public class MainMenu : MonoBehaviour
     }
     void MainMenuSwitch(bool status)
     {
+
+        mainMenuContainer.gameObject.SetActive(status);
+
+        /*
         //Status of title
         mainMenuTitle.gameObject.SetActive(status);
         //Status of start button
@@ -70,10 +93,18 @@ public class MainMenu : MonoBehaviour
         optionsButton.gameObject.SetActive(status);
         //Status of quit button
         quitButton.gameObject.SetActive(status);
+        //Status of highscore Table
+        highscoreTable.gameObject.SetActive(status);
+        */
+
     }
 
     void Options(bool status)
     {
+
+        optionsContainer.gameObject.SetActive(status);
+
+        /*
         //Status of title
         optionsTitle.gameObject.SetActive(status);
         //Set status of options back panel
@@ -84,6 +115,7 @@ public class MainMenu : MonoBehaviour
         backButton.gameObject.SetActive(status);
         //Status of volume title
         volumeTitle.gameObject.SetActive(status);
+        */
 
     }
 

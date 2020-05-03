@@ -32,7 +32,7 @@ public class SkierPhysics : MonoBehaviour
         {
             other.gameObject.SetActive(false);
             coinPickUpSound.Play();
-            entity.score += 1;
+            SkierEntity.score += 1;
         }
         if (other.gameObject.CompareTag("Ramp"))
         {

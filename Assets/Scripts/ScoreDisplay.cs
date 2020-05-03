@@ -15,12 +15,12 @@ public class ScoreDisplay : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        currentScore.text = "Points: " + skier.score.ToString();
+        currentScore.text = "Points: " + SkierEntity.score.ToString();
     }
 
     // Update is called once per frame
     void Update()
     {
-        currentScore.text = "Points: " + skier.score.ToString();
+        currentScore.text = "Points: " + SkierEntity.score.ToString();
     }
 }

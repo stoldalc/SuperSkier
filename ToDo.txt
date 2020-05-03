@@ -1,13 +1,29 @@
 ToDo CS381 Final Project
--Pause
+
+*******Important***********
+-Splash Screen
+-instructions
+-Credits
 -High score page
--Final score on end page
+-Pause
+-Volume slider in options
 -Moving obstacles
--figure out whole map
--Change physics to force instead of transforms
--Instructions page
--Options
+-Instructions page(This will just be on the the start screen)
+
+	--------UI--------
+	-Speed
+	-Make score and time more better
+
 -Mute 
 -Floating arches
 -Ramp speed boosts
--Volume slider in options
+
+
+-figure out whole map
+
+
+-Change physics to force instead of transforms
+
+
+-Add souneffects to geese when they attack
+-add clear highscores button to options menu on main menu

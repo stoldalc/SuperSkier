@@ -28,7 +28,7 @@ public class SkierEntity : MonoBehaviour
     public float speed;
     public float desiredSpeed;
 
-    public int score = 0;
+    static public int score = 0;
 
     public Rigidbody rb;
 
